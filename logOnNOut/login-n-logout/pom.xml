@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>login-n-logout</groupId>
+  <artifactId>login-n-logout</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  
+  
+	<properties>
+		<mysql-connector-java.version>8.0.18</mysql-connector-java.version>
+		<jstl-api.version>1.2</jstl-api.version>
+		<javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+		<javax.servlet.jsp.jstl-api.version>1.2.2</javax.servlet.jsp.jstl-api.version>
+		<springframework.version>5.3.4</springframework.version>
+		<hibernate.version>6.0.0.Alpha6</hibernate.version>
+		<c3p0.version>0.9.5.5</c3p0.version>
+	</properties>
+
+	<dependencies>
+
+
+		<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.23</version>
+		</dependency>
+
+
+
+		<!-- C3PO -->
+		<!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+		</dependency>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Servlet+JSP+JSTL -->
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api -->
+		<dependency>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>jstl-api</artifactId>
+			<version>${jstl-api.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/javax.servlet.jsp.jstl-api -->
+		<dependency>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>javax.servlet.jsp.jstl-api</artifactId>
+			<version>${javax.servlet.jsp.jstl-api.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl-api.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-core -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<!-- Additional Jar -->
+		<!-- https://www.udemy.com/course/spring-hibernate-tutorial/learn/lecture/9195648#questions -->
+	
+	</dependencies>
+  
+  
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>14</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
